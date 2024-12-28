@@ -24,8 +24,9 @@ import {
 
 const CampaignDesign = () => {
   return (
-    <div className="flex gap-3">
-      <div className="w-[600px] rounded-xl border bg-white px-[20px] pb-[30px] pt-[15px]">
+    <div className="grid grid-cols-6 gap-3">
+
+      <div className="col-span-2 rounded-xl border bg-white pl-[10px] pr-[20px] pb-[30px] pt-[15px]">
         <div className="flex items-center gap-6">
           <MoveLeft color="black" size={24} strokeWidth={1.5} />
           <div>
@@ -174,7 +175,7 @@ const CampaignDesign = () => {
         </div>
       </div>
 
-      <div className="rounded-lg border bg-white p-4">
+      <div className="col-span-2 rounded-lg border bg-white p-4">
         <div className="flex items-center justify-between">
           <div className="flex gap-3">
             <AlarmClock color="black" size={20} />
@@ -214,7 +215,7 @@ const CampaignDesign = () => {
         </p>
       </div>
 
-      <div className="rounded-lg border bg-white p-5">
+      <div className="col-span-2 rounded-lg border bg-white p-5">
         <div className="flex items-center justify-between gap-5">
           <Eye />
           <div className="flex justify-end gap-3">
@@ -238,6 +239,7 @@ const CampaignDesign = () => {
           <button className="text-base font-normal text-black px-8 pb-2">Setting</button>
         </div>
       </div>
+
     </div>
   );
 };
