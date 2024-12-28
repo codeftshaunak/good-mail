@@ -11,7 +11,6 @@ const Campaign = () => {
     return (
         <DefaultLayout>
             <div className="mx-auto w-full">
-
                 <CampaignDesign />
             </div>
         </DefaultLayout>
