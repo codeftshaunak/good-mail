@@ -4,6 +4,8 @@ import "@/css/satoshi.css";
 import "@/css/style.css";
 import React, { useEffect, useState } from "react";
 import Loader from "@/components/common/Loader";
+import setupLocatorUI from "@locator/runtime";
+
 
 export default function RootLayout({
   children,
