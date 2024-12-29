@@ -170,7 +170,7 @@ const CampaignDesign = () => {
       </div>
 
       {/* Right Preview Section */}
-      <div className="flex flex-col w-full rounded-lg border bg-white p-5 lg:max-w-[30%] lg:max-h-[800px]">
+      <div className="flex flex-col w-full rounded-lg border bg-white p-5 lg:max-w-[30%] lg:max-h-[1100px]">
   <div className="flex items-center justify-between gap-5">
     <Eye />
     <div className="flex items-center justify-end gap-3">
@@ -306,6 +306,51 @@ const CampaignDesign = () => {
     </div>
   </div>
   </div>
+  <div className="flex items-center mt-6">
+    <p className="text-lg font-medium text-black dark:text-white w-[140px]">Color</p>
+    <div className="bg-transparent border border-1 border-gray-4 flex justify-between items-center px-4 py-3 rounded-md w-full">
+      {/* Left Section */}
+      <div className="flex items-center gap-2">
+        <input className="w-5 h-5" type="checkbox" />
+        <p className="text-gray-950 dark:text-white font-medium text-lg">#FFFFFF</p>
+      </div>
+
+      {/* Right Section */}
+      <div className="flex items-center gap-2">
+        <div className="h-5 w-px bg-gray-600"></div>
+        <p className="text-base font-medium text-black dark:text-white">100%</p>
+      </div>
+
+    </div>
+  </div>
+  <div className="flex items-center mt-6">
+    <p className="text-lg font-medium text-black dark:text-white w-[140px]">Alignment</p>
+    <div className="bg-transparent border border-1 border-gray-4 flex justify-between items-center px-4 py-3 rounded-md w-full">
+    <AlignLeft/>
+    <AlignLeft/>
+    <AlignLeft/>
+    <AlignLeft/>
+    </div>
+  </div>
+  <div className="flex items-center justify-between mt-6 mb-5">
+    <h4 className="text-lg font-semibold text-black dark:text-white">Text block</h4>
+    <ChevronUp />
+  </div>
+  <div className="mt-6 flex items-center">
+  <p className="text-lg font-medium text-black dark:text-white w-[150px]">Font</p>
+  <div className="flex gap-2 w-full">
+    {/* First Box */}
+    <div className="flex gap-4 items-center bg-transparent border border-gray-4 rounded-md px-[20px] py-[10px] w-full">
+      <p className="text-lg font-normal text-black dark:text-white">14</p>
+      <p>px</p>
+    </div>
+    {/* Second Box */}
+    <div className="flex gap-4 items-center justify-center bg-transparent border border-gray-4 rounded-md px-[20px] py-[10px]">
+      <AlignLeft/>
+    </div>
+  </div>
+</div>
+
   </div>
 </div>
 
