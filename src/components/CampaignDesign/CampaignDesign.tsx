@@ -70,35 +70,6 @@ const CampaignDesign = () => {
               </div>
             ))}
           </div>
-          {/* <h4 className="mb-4 mt-4 text-lg font-semibold text-black dark:text-white">
-            Sections
-          </h4> */}
-          {/* <div className="flex flex-col gap-6">
-            {[
-              { columns: 1, label: "Single Column" },
-              { columns: 2, label: "Double Column" },
-            ].map(({ columns, label }, index) => (
-              <div
-                key={index}
-                className="rounded-lg border border-gray-4 bg-transparent"
-              >
-                <div className="mb-4 mt-4 flex flex-col items-center justify-center gap-3">
-                  <GripHorizontal size={24} strokeWidth={1.5} />
-                  <div className={`flex gap-2 ${columns === 1 ? "w-[160px]" : "w-[160px]"}`}>
-                    {[...Array(columns)].map((_, idx) => (
-                      <div
-                        key={idx}
-                        className="w-[80px] rounded-md bg-gray-6 bg-opacity-15 py-8"
-                      ></div>
-                    ))}
-                  </div>
-                  <p className="text-sm font-medium text-black dark:text-gray-1">
-                    {label}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div> */}
               <h4 className="mb-4 mt-4 text-lg font-semibold text-black dark:text-white">
             Sections
           </h4>
@@ -347,14 +318,12 @@ const CampaignDesign = () => {
     {/* Second Box */}
     <div className="flex gap-4 items-center justify-center bg-transparent border border-gray-4 rounded-md px-[20px] py-[10px]">
       <AlignLeft/>
-    </div>
+      </div>
   </div>
 </div>
 
   </div>
 </div>
-
-
 
 </div>
 
