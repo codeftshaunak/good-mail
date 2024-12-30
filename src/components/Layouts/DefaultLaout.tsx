@@ -2,6 +2,7 @@
 import React, { useState, ReactNode } from "react";
 import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
+import CampaignDesign from "../CampaignDesign/CampaignDesign";
 
 export default function DefaultLayout({
   children,

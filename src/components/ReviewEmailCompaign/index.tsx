@@ -26,6 +26,7 @@ const ReviewEmailCompaign = () => {
 
     return (
         <div>
+            
             <div className="bg-black bg-opacity-5 py-8 px-5 rounded-md flex justify-between">
 
                 <div className='flex items-center gap-3'>
@@ -76,6 +77,7 @@ const ReviewEmailCompaign = () => {
                 </div>
                 <button onClick={() => setIsOpenRecipients(!isOpnenRecipients)} className='bg-gray-2 border text-sm font-semibold rounded-2xl text-black border-gray-4 py-[6px] px-[10px]'>Add recipients</button>
             </div>
+
             {isOpnenRecipients && <div className='grid gap-4 grid-cols-6 mt-8 px-8 pr-15'>
                 <div className='col-span-2'>
                     <h4 className='text-lg text-black dark:text-white font-medium'>Recipients</h4>
@@ -153,6 +155,7 @@ const ReviewEmailCompaign = () => {
                 </div>
                 <button onClick={() => setIsOpnenSubject(!isOpnenSubject)} className='bg-gray-2 border text-sm font-semibold rounded-2xl text-black border-gray-4 py-[6px] px-[10px]'>Add subject</button>
             </div>
+
             {isOpnenSubject && <div className='grid grid-cols-3 gap-5 px-[35px] mt-9'>
                 <div className='col-span-1'>
                     <h4 className='text-lg font-semibold text-black dark:text-white'>Subject</h4>
@@ -215,6 +218,7 @@ const ReviewEmailCompaign = () => {
                     </div>
                 </div>
             </div>}
+
             <div className='bg-transparent border border-gray-3 py-2 px-3 rounded-md flex justify-between items-center mt-5'>
                 <div className='flex gap-2'>
                     <Component className='mt-2' color="#7033ff" strokeWidth={1.5} size={22} />
