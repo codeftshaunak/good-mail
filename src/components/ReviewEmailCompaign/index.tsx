@@ -10,11 +10,17 @@ const ReviewEmailCompaign = () => {
     const [isOpnenRecipients, setIsOpenRecipients] = useState(false);
     const [isOpnenSubject, setIsOpnenSubject] = useState(false);
     const [text, setText] = useState('');
+    const [number,setNumber] = useState('');
     const maxLength = 200;
 
     const handleChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         if (event.target.value.length <= maxLength) {
             setText(event.target.value);
+        }
+    };
+    const handleChangeNumber = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+        if (event.target.value.length <= maxLength) {
+            setNumber(event.target.value);
         }
     };
 
@@ -76,11 +82,25 @@ const ReviewEmailCompaign = () => {
                     <p>The people who receive your <br /> campaign</p>
                 </div>
                 <div className='col-span-4'>
-                    <p className='text-base font-medium text-black dark:text-white'>Send to</p>
-                    <div className='bg-transparent border border-gray-5 py-1 px-3 rounded-md flex justify-between items-center mt-5'>
-                        <h4 className='text-md text-black dark:text-white'>Select list(s) or segment(s)</h4>
-                        <ChevronUp size={32} strokeWidth={1} />
-                    </div>
+                    <p className='text-base font-medium text-black dark:text-white mb-3'>Send to</p>
+                    <select
+                        name="firstDropdown"
+                        id="firstDropdown"
+                        className="px-5 py-3 w-full bg-transparent border border-gray-600 rounded-md  font-medium appearance-none pr-10 bg-right bg-no-repeat cursor-pointer"
+                        style={{
+                            backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" /></svg>')`,
+                            backgroundPosition: 'right 12px center',
+                            backgroundSize: '25px 25px', // Increased icon size by ~10%
+                            paddingRight: '28px', // Adjusted padding for the larger icon
+                        }}
+                    >
+                        <option
+                        className='text-md text-black dark:text-white'
+                         value="6">
+                            Select list(s) or segment(s)
+                        </option>
+                        <option value="7">Advance option</option>
+                    </select>
                     <div className='flex items-center gap-1 mt-2'>
                         <input type="checkbox" className='' />
                         <p>Don’t send to unengaged contacts</p>
@@ -110,7 +130,7 @@ const ReviewEmailCompaign = () => {
                     <p>Send to as many recipients as you wish, within your plan limits.</p>
 
                     <div className='flex gap-5 mt-10 justify-end'>
-                        <button className='text-lg font-medium text-black dark:text-white'>Cancle</button>
+                        <button className='text-lg font-medium text-black dark:text-white bg-transparent border border-gray-5 rounded-[5px] md:text-normal py-[6px] px-3 ml-2'>Cancle</button>
                         <ButtonDefault
                             label="Save"
                             link="/campaign"
@@ -172,8 +192,8 @@ const ReviewEmailCompaign = () => {
                         <textarea
                             className="w-full p-3 border border-gray-300 bg-transparent rounded-md"
                             rows={2}
-                            value={text}
-                            onChange={handleChange}
+                            value={number}
+                            onChange={handleChangeNumber}
                             placeholder="Type your message here..."
                         />
                         <div className="flex items-center gap-2 absolute bottom-2 right-2 text-sm text-gray-600">
@@ -185,7 +205,7 @@ const ReviewEmailCompaign = () => {
                         </div>
                     </div>
                     <div className='flex gap-5 mt-10 justify-end'>
-                        <button className='text-lg font-medium text-black dark:text-white'>Cancle</button>
+                        <button className='text-lg font-medium text-black dark:text-white bg-transparent border border-gray-5 rounded-[5px] md:text-normal py-[6px] px-3 ml-2'>Cancle</button>
                         <ButtonDefault
                             label="Save"
                             link="/campaign"

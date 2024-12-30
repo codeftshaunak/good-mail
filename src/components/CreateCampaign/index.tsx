@@ -70,20 +70,20 @@ const CreateCampaign = () => {
                         value={inputValue}
                         onChange={handleChange}
                         placeholder="Search for a campaign"
-                        className={`w-full rounded-lg border-2 bg-transparent border-gray-4 bg-gray-2 py-3 pl-13.5 pr-5 text-dark focus:border-primary focus:outline-none dark:border-dark-4 dark:bg-dark-3 dark:text-white dark:focus:border-primary ${inputValue.length >= maxLength ? "text-red-500" : ""
+                        className={`w-full rounded-lg border-2 bg-transparent border-gray-4 bg-gray-2 py-3 pl-13.5 pr-5 text-dark focus:border-primary focus:outline-none dark:border-dark-4 dark:focus:border-primary ${inputValue.length >= maxLength ? "text-red-500" : ""
                             }`}
                     />
 
                 </div>
-                <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                <div className="mt-2 text-end text-sm text-gray-600 dark:text-gray-400">
                     {inputValue.length}/{maxLength}
                 </div>
                 {inputValue.length === maxLength && (
                     <p className="text-sm text-red-500">Character limit reached!</p>
                 )}
 
-                <div className='flex gap-8 justify-end mt-6'>
-                    <button className='text-lg font-medium text-black'>Cancle</button>
+                <div className='flex gap-4 justify-end mt-6'>
+                    <button className='text-lg font-medium text-black py-[6px] px-2 md:py-[11px] md:px-7 bg-transparent border border-gray-4 rounded-[5px]'>Cancle</button>
                     <ButtonDefault
                         label="Create campaigns"
                         link="/review-campaign"

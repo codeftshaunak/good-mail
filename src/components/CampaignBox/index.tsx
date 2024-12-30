@@ -14,7 +14,8 @@ const CampaignBox = () => {
                 }`}
             onClick={() => setActive(type)}
         >
-            <p>{label}</p>
+            <p  className={`rounded-full ${active === type ? "text-white" : "text-black"
+            }`}>{label}</p>
             <p
                 className={`bg-white px-[8px] py-[2px] rounded-full ${active === type ? "text-black" : "text-black"
                     }`}
@@ -31,7 +32,7 @@ const CampaignBox = () => {
                 <h3 className="text-lg md:text-2xl font-bold text-[#4263EB]">Campaigns</h3>
                 <ButtonDefault
                     label="Create campaigns"
-                    link="/add-campaign"
+                    link="/create-campaign"
                     customClasses="bg-primary rounded-[5px] text-white text-sm md:text-xl py-[5px] px-3 md:py-[11px] md:px-6 md:font-normal ml-2"
                 >
                     <Plus color="white" size={22} strokeWidth={1.5} />
@@ -39,11 +40,12 @@ const CampaignBox = () => {
             </div>
 
             {/* Subheader */}
-            <h4 className="text-primary text-lg font-medium">Grow your business further</h4>
-            <p>Powerful content for business growth, engagement, and lasting success.</p>
+            <div className="px-5 pt-8 pb-3 mb-5 bg-[#F7F9FF] border border-[#94a8f7] rounded-lg shadow-sm">
+            <h4 className="text-primary text-xl font-medium">Grow your business further</h4>
+            <p className="text-black dark:text-white text-base md:text-lg mt-1">Powerful content for business growth, engagement, and lasting success.</p>
 
             {/* Controls */}
-            <div className="md:flex gap-2 justify-between mt-5 mb-5">
+            <div className="md:flex gap-2 justify-between mt-5">
                 <div className="flex items-center justify-center gap-3 border border-gray-4 rounded-[5px] bg-black bg-opacity-5 bg-transparent px-2 py-2">
                     {renderButton("Send", 0, "send")}
                     {renderButton("Draft", 0, "draft")}
@@ -73,7 +75,8 @@ const CampaignBox = () => {
                     </ButtonDefault>
                 </div>
             </div>
-
+            </div>
+           
             {/* Table */}
             <TableThree />
         </div>
