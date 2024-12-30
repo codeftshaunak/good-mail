@@ -29,9 +29,9 @@ const CampaignDesign = () => {
   const [active, setActive] = useState("Color")
 
   return (
-    <div className="flex flex-col gap-3 lg:flex-row">
+    <div className="flex flex-col gap-3 lg:flex-row h-[1140px]">
       {/* Left Sidebar */}
-      <div className="flex flex-col w-full rounded-xl border bg-white p-4 lg:max-w-[30%] md:max-h-[1000px]">
+      <div className="flex flex-col w-full rounded-xl border bg-white p-6 lg:max-w-[30%]">
         <div className="flex items-center gap-6">
           <MoveLeft color="black" size={24} strokeWidth={1.5} />
           <div>
@@ -59,6 +59,9 @@ const CampaignDesign = () => {
               { icon: SquareMinus, label: "Button" },
               { icon: Signature, label: "Signature" },
               { icon: CodeXml, label: "HTML" },
+              { icon: AlignLeft, label: "Text" },
+              { icon: AlignLeft, label: "Text" },
+              { icon: AlignLeft, label: "Text" },
             ].map(({ icon: Icon, label }, index) => (
               <div
                 key={index}
@@ -102,7 +105,7 @@ const CampaignDesign = () => {
       </div>
 
       {/* Center Editor */}
-      <div className="flex flex-col w-full rounded-lg border bg-white p-4 lg:max-w-[40%] lg:max-h-[800px]">
+      <div className="flex flex-col w-full rounded-lg border bg-white p-4 lg:max-w-[40%] lg:max-h-[950px]">
         <div className="flex items-center justify-between">
           <div className="flex gap-3">
             <AlarmClock color="black" size={20} />
@@ -141,7 +144,7 @@ const CampaignDesign = () => {
       </div>
 
       {/* Right Preview Section */}
-      <div className="flex flex-col w-full rounded-lg border bg-white p-5 lg:max-w-[30%] lg:max-h-[1100px]">
+      <div className="flex flex-col w-full rounded-lg border bg-white p-5 lg:max-w-[30%] lg:max-h-[950px]">
   <div className="flex items-center justify-between gap-5">
     <Eye />
     <div className="flex items-center justify-end gap-3">
@@ -168,11 +171,11 @@ const CampaignDesign = () => {
     </button>
   </div>
 
-  <div className="flex items-center justify-between mt-6 mb-5">
+  <div className="flex items-center justify-between mt-5">
     <h4 className="text-lg font-semibold text-black dark:text-white">Background</h4>
     <ChevronUp />
   </div>
-  <div className="bg-black bg-opacity-5 mt-10 py-2 px-2 rounded-md grid grid-cols-2">
+  <div className="bg-black bg-opacity-5 mt-5 py-2 px-2 rounded-md grid grid-cols-2">
     <button
       className={`text-base rounded-md font-semibold py-2 ${
         active === "Color" ? "bg-white text-primary" : "bg-transparent text-black"
