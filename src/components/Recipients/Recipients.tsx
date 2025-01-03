@@ -1,13 +1,13 @@
 "use client"
 import React, { useState } from 'react'
 import ButtonDefault from '../Buttons/ButtonDefault'
-import { ChevronDown, CircleDot, MoveLeft, PencilLine, X } from 'lucide-react'
+import { ChevronDown, CircleDot, MoveLeft, PencilLine, X } from 'lucide-react';
 
 const Recipients = () => {
     const [isOpen,setIsOpen] = useState(false)
   return (
     <div>
-        <div className="bg-white bg-opacity-85 py-4 px-5 rounded-md flex justify-between">
+        <div className="bg-white bg- opacity-85 py-4 px-5 rounded-md flex justify-between">
         {/* Left Section */}
         <div className="flex items-center gap-4">
           <MoveLeft className="text-black  cursor-pointer" />
@@ -137,4 +137,4 @@ const Recipients = () => {
   )
 }
 
-export default Recipients
+export default Recipients;
